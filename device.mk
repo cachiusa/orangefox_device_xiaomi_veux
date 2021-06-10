@@ -85,3 +85,10 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier \
     update_engine_sideload
+    
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.qti
+
+# Inherit from proprietary targets
+$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
