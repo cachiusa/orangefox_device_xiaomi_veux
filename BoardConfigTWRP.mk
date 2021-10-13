@@ -24,6 +24,10 @@ TW_INPUT_BLACKLIST := "uinput-goodix"
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
 
+# Logcat
+TARGET_USES_LOGD    := true
+TWRP_INCLUDE_LOGCAT := true
+
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
 
