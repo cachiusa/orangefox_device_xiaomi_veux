@@ -30,6 +30,10 @@ TW_USE_FSCRYPT_POLICY          := 2
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
 
+# Logcat
+TARGET_USES_LOGD    := true
+TWRP_INCLUDE_LOGCAT := true
+
 # USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
