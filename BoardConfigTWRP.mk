@@ -48,3 +48,6 @@ TW_QCOM_ATS_OFFSET           := 1596724914595
 # UI
 TW_THEME              := portrait_hdpi
 TW_EXTRA_LANGUAGES    := true
+
+# USB
+TW_EXCLUDE_DEFAULT_USB_INIT := true
