@@ -15,5 +15,8 @@ VENDOR_SECURITY_PATCH          := 2099-12-31
 TW_INCLUDE_CRYPTO              := true
 TW_USE_FSCRYPT_POLICY          := 2
 
+# USB
+TW_EXCLUDE_DEFAULT_USB_INIT := true
+
 # Vibrator
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
