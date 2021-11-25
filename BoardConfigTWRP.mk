@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# APEX
+TW_EXCLUDE_APEX := true
+
 # Encryption
 BOARD_USES_METADATA_PARTITION  := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
