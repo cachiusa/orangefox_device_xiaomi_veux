@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# APEX
+TW_EXCLUDE_APEX := true
+
 # Brightness
 TW_BRIGHTNESS_PATH    := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 200
