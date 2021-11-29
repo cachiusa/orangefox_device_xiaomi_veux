@@ -7,6 +7,11 @@
 # APEX
 TW_EXCLUDE_APEX := true
 
+# Brightness
+TW_BRIGHTNESS_PATH    := "/sys/class/backlight/panel0-backlight/brightness"
+TW_DEFAULT_BRIGHTNESS := 200
+TW_MAX_BRIGHTNESS     := 2047
+
 # Encryption
 BOARD_USES_METADATA_PARTITION  := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
