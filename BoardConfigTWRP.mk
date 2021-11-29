@@ -19,6 +19,7 @@ TW_INPUT_BLACKLIST := "uinput-goodix"
 
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
+TW_NO_EXFAT_FUSE   := true
 
 # UI
 TW_THEME              := portrait_hdpi
