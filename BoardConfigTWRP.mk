@@ -28,6 +28,7 @@ TW_USE_FSCRYPT_POLICY          := 2
 
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
+TW_NO_EXFAT_FUSE   := true
 
 # USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
