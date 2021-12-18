@@ -21,6 +21,9 @@ TW_INPUT_BLACKLIST := "uinput-goodix"
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
 
+# Storage
+RECOVERY_SDCARD_ON_DATA := true
+
 # UI
 TW_THEME              := portrait_hdpi
 TW_EXTRA_LANGUAGES    := true
