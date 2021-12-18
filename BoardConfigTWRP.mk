@@ -34,6 +34,9 @@ TW_NO_EXFAT_FUSE   := true
 TARGET_USES_LOGD    := true
 TWRP_INCLUDE_LOGCAT := true
 
+# Storage
+RECOVERY_SDCARD_ON_DATA := true
+
 # USB
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
