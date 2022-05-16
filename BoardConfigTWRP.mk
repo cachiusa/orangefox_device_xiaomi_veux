@@ -24,6 +24,10 @@ TW_NO_EXFAT_FUSE   := true
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
 
+# Time
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_QCOM_ATS_OFFSET           := 1596724914595
+
 # UI
 TW_THEME              := portrait_hdpi
 TW_EXTRA_LANGUAGES    := true
