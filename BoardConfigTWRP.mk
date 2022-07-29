@@ -7,6 +7,9 @@
 # APEX
 TW_EXCLUDE_APEX := true
 
+# Battery
+TW_BATTERY_SYSFS_WAIT_SECONDS := 5
+
 # Brightness
 TW_BRIGHTNESS_PATH    := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 200
