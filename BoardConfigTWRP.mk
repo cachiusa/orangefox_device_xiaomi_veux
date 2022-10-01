@@ -12,6 +12,9 @@ TW_BRIGHTNESS_PATH    := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 200
 TW_MAX_BRIGHTNESS     := 2047
 
+# Display
+TW_NO_SCREEN_BLANK := true
+
 # Encryption
 BOARD_USES_METADATA_PARTITION  := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
