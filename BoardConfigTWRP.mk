@@ -17,6 +17,9 @@ TW_NO_SCREEN_BLANK := true
 TW_FRAMERATE       := 120
 TW_INPUT_BLACKLIST := "uinput-goodix"
 
+# Filesystem tools
+TW_INCLUDE_NTFS_3G := true
+
 # UI
 TW_THEME              := portrait_hdpi
 TW_EXTRA_LANGUAGES    := true
