@@ -49,7 +49,6 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
-    msm_rtb.filter=0x237 \
     service_locator.enable=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
     swiotlb=noforce \
