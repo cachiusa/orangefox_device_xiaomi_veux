@@ -72,6 +72,9 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.qcom.rc
 
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
