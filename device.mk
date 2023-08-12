@@ -26,6 +26,9 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
