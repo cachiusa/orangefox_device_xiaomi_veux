@@ -12,6 +12,7 @@ TW_MAX_BRIGHTNESS     := 2047
 # Display
 TW_NO_SCREEN_BLANK := true
 TW_FRAMERATE       := 120
+TW_INPUT_BLACKLIST := "uinput-goodix"
 
 # UI
 TW_THEME              := portrait_hdpi
