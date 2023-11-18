@@ -26,6 +26,7 @@ TW_USE_FSCRYPT_POLICY           := 2
 TW_BRIGHTNESS_PATH    := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 200
 TW_FRAMERATE          := 120
+TW_INPUT_BLACKLIST    := "uinput-goodix"
 TW_MAX_BRIGHTNESS     := 2047
 TW_NO_SCREEN_BLANK    := true
 
