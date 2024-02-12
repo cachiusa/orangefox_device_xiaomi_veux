@@ -20,6 +20,10 @@ TW_NO_SCREEN_BLANK := true
 TW_FRAMERATE       := 120
 TW_INPUT_BLACKLIST := "uinput-goodix"
 
+# Extras
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP    := true
+
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
