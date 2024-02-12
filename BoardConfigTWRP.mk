@@ -31,6 +31,10 @@ VENDOR_SECURITY_PATCH          := 2099-12-31
 TW_INCLUDE_CRYPTO              := true
 TW_USE_FSCRYPT_POLICY          := 2
 
+# Extras
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_RESETPROP    := true
+
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
