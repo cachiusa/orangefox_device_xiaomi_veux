@@ -24,6 +24,9 @@ TW_INPUT_BLACKLIST := "uinput-goodix"
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP    := true
 
+# Fastboot
+TW_NO_FASTBOOT_BOOT := true
+
 # Filesystem tools
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE   := true
