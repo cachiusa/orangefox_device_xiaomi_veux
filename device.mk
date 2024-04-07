@@ -63,6 +63,11 @@ PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
+# qcom decryption
+PRODUCT_PACKAGES_ENG += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.default \
