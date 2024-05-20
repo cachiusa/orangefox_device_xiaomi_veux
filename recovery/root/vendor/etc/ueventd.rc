@@ -1,0 +1,2 @@
+#permissions for UFS RPMB BSG device node
+/dev/0:0:0:49476          0600   system     system
