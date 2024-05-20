@@ -5,15 +5,27 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
+# Enable project quotas and casefolding for emulated storage without sdcardfs
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common twrp stuff.
+# Inherit some common TWRP stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
+
+# Inherit any OrangeFox-specific settings
+$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_veux.mk)
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
+
+# Inherit from proprietary targets
+$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
 
 PRODUCT_DEVICE := veux
 PRODUCT_NAME := twrp_veux
