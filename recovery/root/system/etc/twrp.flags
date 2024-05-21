@@ -20,3 +20,6 @@
 /persist_img        emmc    /dev/block/bootdevice/by-name/persist                     flags=display="Persist Image";backup
 
 /cust               ext4    /dev/block/bootdevice/by-name/cust                        flags=display="Cust";wipeingui
+
+/external_sdcard    vfat    /devices/platform/soc/4784000.sdhci/mmc_host*             flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
+/usb-otg            vfat    /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto*   flags=fsflags="nosuid,nodev,utf8";display="USB OTG";storage;wipeingui;removable
