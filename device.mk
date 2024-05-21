@@ -62,8 +62,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery \
+    android.hardware.fastboot@1.1-impl-mock \
     fastbootd
 
 # f2fs utilities
@@ -115,7 +114,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    android.hardware.usb@1.3-service-qti \
     init.qcom.usb.rc \
     init.qcom.usb.sh
 
