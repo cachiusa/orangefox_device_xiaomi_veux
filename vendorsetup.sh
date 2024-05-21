@@ -32,14 +32,13 @@ export FOX_VIRTUAL_AB_DEVICE=1
 # screen settings
 export OF_SCREEN_H=2400
 export OF_STATUS_H=104
-export OF_STATUS_INDENT_LEFT=38
+export OF_STATUS_INDENT_LEFT=64
 export OF_STATUS_INDENT_RIGHT=64
 export OF_CLOCK_POS=1
 
 # other stuff
-export OF_IGNORE_LOGICAL_MOUNT_ERRORS=1
 export OF_USE_GREEN_LED=0
-export OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;"
+export OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;/dtbo;"
 export OF_ENABLE_LPTOOLS=1
 export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 
@@ -47,7 +46,7 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_DYNAMIC_FULL_SIZE=9122611200
 
 # number of list options before scrollbar creation
-export OF_OPTIONS_LIST_NUM=6
+export OF_OPTIONS_LIST_NUM=8
 
 # ----- data format stuff -----
 # ensure that /sdcard is bind-unmounted before f2fs data repair or format
@@ -59,11 +58,4 @@ export OF_WIPE_METADATA_AFTER_DATAFORMAT=1
 # avoid MTP issues after data format
 export OF_BIND_MOUNT_SDCARD_ON_FORMAT=1
 
-# refresh encryption props before formatting data
-#  OF_REFRESH_ENCRYPTION_PROPS_BEFORE_FORMAT=1
-
-#ifeq ($(FOX_VENDOR_BOOT_RECOVERY),)
 export OF_USE_LZ4_COMPRESSION=0
-#endif
-#
-
