@@ -98,10 +98,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/google/interfaces \
-    hardware/google/pixel \
     hardware/xiaomi \
-    vendor/qcom/opensource/usb/etc
+    hardware/qcom-caf/bootctrl \
+    vendor/qcom/opensource/usb/etc \
+    vendor/qcom/opensource/commonsys-intf/display
 
 # Thermal
 PRODUCT_PACKAGES += \
