@@ -4,22 +4,22 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# mount point       fstype  device                             device2                flags
-/boot               emmc    /dev/block/bootdevice/by-name/boot                        flags=display="Boot";backup;flashimg;slotselect
-/vendor_boot        emmc    /dev/block/bootdevice/by-name/vendor_boot                 flags=display="Vendor Boot";backup;flashimg;slotselect
+# mount point       fstype  device                                                                   device2                                                                 flags
+/boot               emmc    /dev/block/bootdevice/by-name/boot                                                                                                               flags=display="Boot";backup;flashimg;slotselect
+/vendor_boot        emmc    /dev/block/bootdevice/by-name/vendor_boot                                                                                                        flags=display="Vendor Boot";backup;flashimg;slotselect
 
-/dtbo               emmc    /dev/block/bootdevice/by-name/dtbo                        flags=display="DTBO";backup;flashimg;slotselect
-/vbmeta             emmc    /dev/block/bootdevice/by-name/vbmeta                      flags=display="VBMeta";backup;flashimg;slotselect
-/vbmeta_system      emmc    /dev/block/bootdevice/by-name/vbmeta_system               flags=display="System VBMeta";backup;flashimg;slotselect
+/dtbo               emmc    /dev/block/bootdevice/by-name/dtbo                                                                                                               flags=display="DTBO";backup;flashimg;slotselect
+/vbmeta             emmc    /dev/block/bootdevice/by-name/vbmeta                                                                                                             flags=display="VBMeta";backup;flashimg;slotselect
+/vbmeta_system      emmc    /dev/block/bootdevice/by-name/vbmeta_system                                                                                                      flags=display="System VBMeta";backup;flashimg;slotselect
 
-/efs1               emmc    /dev/block/bootdevice/by-name/modemst1                    flags=display="EFS";backup
-/efs2               emmc    /dev/block/bootdevice/by-name/modemst2                    flags=backup;subpartitionof=/efs1
-/efsc               emmc    /dev/block/bootdevice/by-name/fsc                         flags=backup;subpartitionof=/efs1
-/efsg               emmc    /dev/block/bootdevice/by-name/fsg                         flags=backup;subpartitionof=/efs1
+/efs1               emmc    /dev/block/bootdevice/by-name/modemst1                                                                                                           flags=display="EFS";backup
+/efs2               emmc    /dev/block/bootdevice/by-name/modemst2                                                                                                           flags=backup;subpartitionof=/efs1
+/efsc               emmc    /dev/block/bootdevice/by-name/fsc                                                                                                                flags=backup;subpartitionof=/efs1
+/efsg               emmc    /dev/block/bootdevice/by-name/fsg                                                                                                                flags=backup;subpartitionof=/efs1
 
-/persist_img        emmc    /dev/block/bootdevice/by-name/persist                     flags=display="Persist Image";backup
+/persist_img        emmc    /dev/block/bootdevice/by-name/persist                                                                                                            flags=display="Persist Image";backup
 
-/cust               ext4    /dev/block/bootdevice/by-name/cust                        flags=display="Cust";wipeingui
+/cust               ext4    /dev/block/bootdevice/by-name/cust                                                                                                               flags=display="Cust";wipeingui
 
-/external_sdcard    vfat    /devices/platform/soc/4784000.sdhci/mmc_host*             flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
-/usb-otg            vfat    /devices/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto*   flags=fsflags="nosuid,nodev,utf8";display="USB OTG";storage;wipeingui;removable
+/external_sdcard    vfat    /dev/block/platform/soc/4784000.sdhci/mmc_host/mmcblk1p1                 /dev/block/platform/soc/4784000.sdhci/mmc_host/mmcblk1                  flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
+/usb_otg            vfat    /dev/block/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto/sdg1  /dev/block/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto/sdgs flags=fsflags="nosuid,nodev,utf8";display="USB OTG";storage;wipeingui;removable
