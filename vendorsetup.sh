@@ -18,44 +18,64 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-export ALLOW_MISSING_DEPENDENCIES=true
-export LC_ALL="C"
+if [ -z "$BASH_SOURCE" ]; then
+  echo "warn: This command should be run with /bin/bash shell"
+fi
 
-export FOX_BUILD_DEVICE=veux
-export TARGET_DEVICE_ALT=peux
-export FOX_TARGET_DEVICES="veux,peux"
+set -a
 
-export FOX_VENDOR_BOOT_RECOVERY=1
-export FOX_AB_DEVICE=1
-export FOX_VIRTUAL_AB_DEVICE=1
+# Build hack
+ALLOW_MISSING_DEPENDENCIES=true
 
-# screen settings
-export OF_SCREEN_H=2400
-export OF_STATUS_H=104
-export OF_STATUS_INDENT_LEFT=64
-export OF_STATUS_INDENT_RIGHT=64
-export OF_CLOCK_POS=1
+# Force default locale
+LC_ALL="C"
 
-# other stuff
-export OF_USE_GREEN_LED=0
-export OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;/dtbo;"
-export OF_ENABLE_LPTOOLS=1
-export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+# General
+FOX_BUILD_DEVICE=veux
+FOX_TARGET_DEVICES="veux,peux"
+TARGET_DEVICE_ALT=peux
 
-# full size
-export OF_DYNAMIC_FULL_SIZE=9122611200
+# about
+FOX_VARIANT="vendor_boot-as-recovery"
+OF_MAINTAINER="github.com/cachiusa"
 
-# number of list options before scrollbar creation
-export OF_OPTIONS_LIST_NUM=8
+# A/B
+FOX_AB_DEVICE=1
+FOX_VIRTUAL_AB_DEVICE=1
 
-# ----- data format stuff -----
-# ensure that /sdcard is bind-unmounted before f2fs data repair or format
-export OF_UNBIND_SDCARD_F2FS=1
+# vendor_boot
+FOX_VENDOR_BOOT_RECOVERY=1
+FOX_VENDOR_BOOT_RECOVERY_FULL_REFLASH=1
 
-# automatically wipe /metadata after data format
-export OF_WIPE_METADATA_AFTER_DATAFORMAT=1
+# Display
+OF_CLOCK_POS=1
+OF_SCREEN_H=2400
+OF_STATUS_H=104
+OF_STATUS_INDENT_LEFT=64
+OF_STATUS_INDENT_RIGHT=64
 
-# avoid MTP issues after data format
-export OF_BIND_MOUNT_SDCARD_ON_FORMAT=1
+# Miscellaneous
+OF_FLASHLIGHT_ENABLE=0
+OF_OPTIONS_LIST_NUM=8
+OF_QUICK_BACKUP_LIST="/boot;/vendor_boot;/dtbo;"
+OF_USE_GREEN_LED=0
 
-export OF_USE_LZ4_COMPRESSION=0
+# Add-ons
+FOX_ASH_IS_BASH=1
+FOX_DELETE_AROMAFM=1
+FOX_ENABLE_APP_MANAGER=1
+FOX_USE_BASH_SHELL=1
+FOX_USE_NANO_EDITOR=1
+FOX_USE_SED_BINARY=1
+FOX_USE_TAR_BINARY=1
+FOX_USE_UPDATED_MAGISKBOOT=1
+FOX_USE_XZ_UTILS=1
+OF_ENABLE_LPTOOLS=1
+
+# Filesystem
+OF_BIND_MOUNT_SDCARD_ON_FORMAT=1
+OF_DYNAMIC_FULL_SIZE=9122611200
+OF_UNBIND_SDCARD_F2FS=1
+OF_WIPE_METADATA_AFTER_DATAFORMAT=1
+
+set +a
