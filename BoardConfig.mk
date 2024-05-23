@@ -46,19 +46,18 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 VENDOR_CMDLINE := androidboot.hardware=qcom \
-lpm_levels.sleep_disabled=1 \
-service_locator.enable=1 \
-androidboot.usbcontroller=4e00000.dwc3 \
-swiotlb=noforce \
-loop.max_part=7 \
-iptable_raw.raw_before_defrag=1 \
-ip6table_raw.raw_before_defrag=1 \
-firmware_class.path=/vendor/firmware
+                  lpm_levels.sleep_disabled=1 \
+                  service_locator.enable=1 \
+                  androidboot.usbcontroller=4e00000.dwc3 \
+                  swiotlb=noforce \
+                  loop.max_part=7 \
+                  iptable_raw.raw_before_defrag=1 \
+                  ip6table_raw.raw_before_defrag=1 \
+                  firmware_class.path=/vendor/firmware
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(OUT_DIR)/target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline "$(VENDOR_CMDLINE)"
-
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
@@ -109,52 +108,7 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP specific build flags
-## General
-TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
-TW_NO_SCREEN_BLANK := true
-TW_EXCLUDE_APEX := true
-TW_HAS_EDL_MODE := true
-TW_BATTERY_SYSFS_WAIT_SECONDS := 5
-TW_INCLUDE_FASTBOOTD := 1
-
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
-
-## CPU
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone26/temp"
-
-TARGET_RECOVERY_QCOM_RTC_FIX := true
-
-## Crypto & FBE
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_CRYPTO_FBE := true
-TW_INCLUDE_FBE_METADATA_DECRYPT := true
-TW_USE_FSCRYPT_POLICY := 2
-
-BOARD_USES_QCOM_FBE_DECRYPTION := true
-BOARD_USES_METADATA_PARTITION := true
-
-## Display
-TW_FRAMERATE := 120
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
-TW_MAX_BRIGHTNESS := 2047
-TW_DEFAULT_BRIGHTNESS := 200
-
-## Filesystem
-TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_INCLUDE_NTFS_3G := true
-TW_NO_EXFAT_FUSE := true
-TW_IS_SUPER := 1
-
-RECOVERY_SDCARD_ON_DATA := true
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
-
-## Misc.
-TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_SUPPORT_INPUT_AIDL_HAPTICS := true
-
-# end of TWRP
+include $(DEVICE_PATH)/BoardConfigTWRP.mk
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
