@@ -82,3 +82,6 @@ OF_WIPE_METADATA_AFTER_DATAFORMAT=1
 OUT_KERNEL_DTB="target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb"
 
 set +a
+
+# Call other setup scripts
+. ./device/xiaomi/veux/reposetup.sh
