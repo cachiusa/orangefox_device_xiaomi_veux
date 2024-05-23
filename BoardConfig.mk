@@ -56,7 +56,7 @@ VENDOR_CMDLINE := androidboot.hardware=qcom \
                   firmware_class.path=/vendor/firmware
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS += --dtb $(OUT_DIR)/target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(OUT_DIR)/$(OUT_KERNEL_DTB)
 BOARD_MKBOOTIMG_ARGS += --vendor_cmdline "$(VENDOR_CMDLINE)"
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true

@@ -21,7 +21,6 @@
 if [ -z "$BASH_SOURCE" ]; then
   echo "warn: This command should be run with /bin/bash shell"
 fi
-
 set -a
 
 # Build hack
@@ -36,6 +35,7 @@ FOX_TARGET_DEVICES="veux,peux"
 TARGET_DEVICE_ALT=peux
 
 # about
+FOX_VERSION=$(date +"%d%m%Y")
 FOX_VARIANT="vendor_boot-as-recovery"
 OF_MAINTAINER="github.com/cachiusa"
 
@@ -77,5 +77,8 @@ OF_BIND_MOUNT_SDCARD_ON_FORMAT=1
 OF_DYNAMIC_FULL_SIZE=9122611200
 OF_UNBIND_SDCARD_F2FS=1
 OF_WIPE_METADATA_AFTER_DATAFORMAT=1
+
+# Kernel
+OUT_KERNEL_DTB="target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb"
 
 set +a
