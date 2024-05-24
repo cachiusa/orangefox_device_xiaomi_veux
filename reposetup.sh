@@ -16,7 +16,6 @@ check_submodule () {
 echo "[+] Checking for dependencies..."
 check_submodule https://github.com/cachiusa/veux-prebuilts device/xiaomi/veux/prebuilts
 check_submodule https://github.com/dereference23/kernel_xiaomi_sm6375 kernel/xiaomi/sm6375
-check_submodule https://github.com/PixelExperienceArchive/vendor_xiaomi_veux vendor/xiaomi/veux
 
 if [ ! -f kernel/xiaomi/sm6375/Android.bp ]; then
   mv kernel/xiaomi/sm6375/Androidbp kernel/xiaomi/sm6375/Android.bp

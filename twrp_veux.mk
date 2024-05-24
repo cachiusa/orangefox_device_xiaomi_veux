@@ -24,9 +24,6 @@ $(call inherit-product-if-exists, $(DEVICE_PATH)/fox_veux.mk)
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
 
-# Inherit from proprietary targets
-$(call inherit-product, vendor/xiaomi/veux/veux-vendor.mk)
-
 PRODUCT_DEVICE := veux
 PRODUCT_NAME := twrp_veux
 PRODUCT_BRAND := Redmi
