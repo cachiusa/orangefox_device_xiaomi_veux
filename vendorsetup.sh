@@ -35,7 +35,7 @@ FOX_TARGET_DEVICES="veux,peux"
 TARGET_DEVICE_ALT=peux
 
 # about
-FOX_VERSION=$(date +"%d%m%Y")
+FOX_VERSION=$(date +"%Y%m%d")
 FOX_VARIANT="vendor_boot-as-recovery"
 
 # A/B
@@ -54,8 +54,8 @@ FOX_USE_BASH_SHELL=1
 FOX_USE_NANO_EDITOR=1
 FOX_USE_SED_BINARY=1
 FOX_USE_TAR_BINARY=1
-FOX_USE_UPDATED_MAGISKBOOT=1
 FOX_USE_XZ_UTILS=1
+FOX_USE_ZSTD_BINARY=1
 
 # Kernel
 OUT_KERNEL_DTB="target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb"

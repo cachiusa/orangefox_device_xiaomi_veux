@@ -20,7 +20,7 @@
 #
 
 # about
-OF_MAINTAINER := "github.com/cachiusa"
+OF_MAINTAINER := github.com/cachiusa
 
 # Display
 OF_CLOCK_POS := 1
@@ -31,8 +31,8 @@ OF_STATUS_INDENT_RIGHT := 64
 
 # Miscellaneous
 OF_FLASHLIGHT_ENABLE := 0
-OF_OPTIONS_LIST_NUM := 8
-OF_QUICK_BACKUP_LIST := "/boot;/vendor_boot;/dtbo;"
+OF_OPTIONS_LIST_NUM := 12
+OF_QUICK_BACKUP_LIST := /boot;/vendor_boot;/dtbo;
 OF_USE_GREEN_LED := 0
 
 # Add-ons

@@ -4,6 +4,9 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
+# Release name
+PRODUCT_RELEASE_NAME := veux
+DEVICE_PATH := device/xiaomi/$(PRODUCT_RELEASE_NAME)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
