@@ -39,6 +39,9 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := veux
 
+# device information for "fastboot update <zip-file>"
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
