@@ -22,20 +22,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit any OrangeFox-specific settings
-$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_veux.mk)
+$(call inherit-product-if-exists, $(DEVICE_PATH)/fox_$(PRODUCT_RELEASE_NAME).mk)
 
 # Inherit from veux device
 $(call inherit-product, device/xiaomi/veux/device.mk)
 
-PRODUCT_DEVICE := veux
-PRODUCT_NAME := twrp_veux
-PRODUCT_BRAND := Redmi
+PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
+PRODUCT_NAME := twrp_$(PRODUCT_DEVICE)
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 11 Pro 5G
-PRODUCT_MANUFACTURER := xiaomi
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="twrp_veux-eng 12 SP2A.220405.004 eng.derefe.20240301.163808 test-keys"
-
-BUILD_FINGERPRINT := Redmi/twrp_veux/veux:12/SP2A.220405.004/dereference03011637:eng/test-keys

@@ -1,12 +1,6 @@
 [
   {
     "remote": "github",
-    "repository": "cachiusa/vendor_xiaomi_veux",
-    "target_path": "vendor/xiaomi/veux",
-    "revision": "fourteen"
-  },
-  {
-    "remote": "github",
     "repository": "dereference23/kernel_xiaomi_sm6375",
     "target_path": "kernel/xiaomi/sm6375",
     "revision": "main"
