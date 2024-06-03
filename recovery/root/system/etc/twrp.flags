@@ -21,5 +21,5 @@
 
 /cust               ext4    /dev/block/bootdevice/by-name/cust                                                                                                               flags=display="Cust";wipeingui
 
-/external_sdcard    vfat    /dev/block/platform/soc/4784000.sdhci/mmc_host/mmcblk1p1                 /dev/block/platform/soc/4784000.sdhci/mmc_host/mmcblk1                  flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
+/external_sdcard    vfat    /dev/block/platform/soc/4784000.sdhci/mmcblk1p1                          /dev/block/platform/soc/4784000.sdhci/mmcblk1                           flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
 /usb_otg            vfat    /dev/block/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto/sdg1  /dev/block/platform/soc/4e00000.ssusb/4e00000.dwc3/xhci-hcd.1.auto/sdgs flags=fsflags="nosuid,nodev,utf8";display="USB OTG";storage;wipeingui;removable
