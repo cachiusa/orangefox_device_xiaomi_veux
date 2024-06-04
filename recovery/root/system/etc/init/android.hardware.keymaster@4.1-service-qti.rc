@@ -2,6 +2,6 @@ on init
     start vendor.keymaster-4-1
 
 service vendor.keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
-    seclabel u:r:recovery:s0
+    class early_hal
     user system
     group system drmrpc
