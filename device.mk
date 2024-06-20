@@ -23,11 +23,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2
     
-# Fastbootd
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
-
 # f2fs utilities
 PRODUCT_PACKAGES += \
     sg_write_buffer \
@@ -37,11 +32,6 @@ PRODUCT_PACKAGES += \
 # ION
 PRODUCT_PACKAGES += \
     libion.recovery
-
-# qcom decryption
-PRODUCT_PACKAGES_ENG += \
-    qcom_decrypt \
-    qcom_decrypt_fbe
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30

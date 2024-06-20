@@ -1,0 +1,6 @@
+on late-init
+
+service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+    seclabel u:r:recovery:s0
+    user system
+    group system input
