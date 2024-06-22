@@ -1,4 +1,4 @@
 service gatekeeper-1-0 /vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
-    class early_hal
+    seclabel u:r:recovery:s0
     user system
     group system

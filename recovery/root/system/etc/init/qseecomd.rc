@@ -7,6 +7,6 @@ on init
     start vendor.qseecomd
 
 service vendor.qseecomd /vendor/bin/qseecomd
-    class core
+    seclabel u:r:recovery:s0
     user root
     group root
