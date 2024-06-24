@@ -56,7 +56,8 @@ VENDOR_CMDLINE := androidboot.hardware=qcom \
                   loop.max_part=7 \
                   iptable_raw.raw_before_defrag=1 \
                   ip6table_raw.raw_before_defrag=1 \
-                  firmware_class.path=/vendor/firmware
+                  firmware_class.path=/vendor/firmware \
+                  ignore_builtin_recovery
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(OUT_DIR)/$(OUT_KERNEL_DTB)
