@@ -40,7 +40,8 @@ BOARD_KERNEL_CMDLINE := \
     loop.max_part=7 \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1 \
-    firmware_class.path=/vendor/firmware
+    firmware_class.path=/vendor/firmware \
+    ignore_builtin_recovery
 
 TARGET_KERNEL_CONFIG := veux_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
