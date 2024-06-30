@@ -47,27 +47,30 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
-VENDOR_CMDLINE := androidboot.hardware=qcom \
-                  lpm_levels.sleep_disabled=1 \
-                  service_locator.enable=1 \
-                  androidboot.usbcontroller=4e00000.dwc3 \
-                  swiotlb=noforce \
-                  loop.max_part=7 \
-                  iptable_raw.raw_before_defrag=1 \
-                  ip6table_raw.raw_before_defrag=1 \
-                  firmware_class.path=/vendor/firmware \
-                  ignore_builtin_recovery
+
 BOARD_BOOT_HEADER_VERSION := 3
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
-BOARD_MKBOOTIMG_ARGS += --dtb $(OUT_DIR)/$(OUT_KERNEL_DTB)
-BOARD_MKBOOTIMG_ARGS += --vendor_cmdline "$(VENDOR_CMDLINE)"
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+BOARD_KERNEL_CMDLINE := \
+    androidboot.hardware=qcom \
+    lpm_levels.sleep_disabled=1 \
+    service_locator.enable=1 \
+    androidboot.usbcontroller=4e00000.dwc3 \
+    swiotlb=noforce \
+    loop.max_part=7 \
+    iptable_raw.raw_before_defrag=1 \
+    ip6table_raw.raw_before_defrag=1 \
+    firmware_class.path=/vendor/firmware \
+    ignore_builtin_recovery
 
 TARGET_KERNEL_CONFIG := veux_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
 TARGET_KERNEL_NO_GCC := true
+
+TARGET_KERNEL_ADDITIONAL_FLAGS += DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728

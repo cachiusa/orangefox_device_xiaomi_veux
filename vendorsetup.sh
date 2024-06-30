@@ -57,9 +57,6 @@ FOX_USE_TAR_BINARY=1
 FOX_USE_XZ_UTILS=1
 FOX_USE_ZSTD_BINARY=1
 
-# Kernel
-OUT_KERNEL_DTB="target/product/veux/obj/KERNEL_OBJ/arch/arm64/boot/dts/vendor/xiaomi/veux.dtb"
-
 set +a
 
 # Call other setup scripts
