@@ -62,3 +62,13 @@ set +a
 
 # Call other setup scripts
 . ./device/xiaomi/veux/reposetup.sh
+
+# boot-as-recovery?
+if [[ "$FOX_VENDOR_BOOT_RECOVERY" != "1" ]]; then
+  export FOX_VARIANT="boot-as-recovery"
+  export VBAR=0
+  unset FOX_VENDOR_BOOT_RECOVERY \
+        FOX_VENDOR_BOOT_RECOVERY_FULL_REFLASH
+else
+  export VBAR=1
+fi

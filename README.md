@@ -23,6 +23,12 @@ _lunch_ command :
 lunch twrp_veux-eng && mka adbd vendorbootimage
 ```
 
+If building for boot-as-recovery ROMs, comment `FOX_VENDOR_BOOT_RECOVERY` in [vendorsetup.sh](vendorsetup.sh) and run:
+```
+lunch twrp_veux-eng && mka adbd bootimage
+```
+
+
 ## Credits
 - [Kernel](https://github.com/dereference23/kernel_xiaomi_sm6375)
 

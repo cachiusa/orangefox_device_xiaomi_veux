@@ -44,6 +44,8 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
 
+ifeq ($(VBAR),1)
 # copy vendor_boot fstab to first_stage_ramdisk
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
+endif

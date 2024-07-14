@@ -8,9 +8,6 @@
 PRODUCT_RELEASE_NAME := veux
 DEVICE_PATH := device/xiaomi/$(PRODUCT_RELEASE_NAME)
 
-# A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
-
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
@@ -33,3 +30,10 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi Note 11 Pro 5G
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# A/B
+ifeq ($(VBAR),1)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+else
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
+endif
