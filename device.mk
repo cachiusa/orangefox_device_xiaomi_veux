@@ -40,10 +40,6 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
-
 ifeq ($(VBAR),1)
 # copy vendor_boot fstab to first_stage_ramdisk
 PRODUCT_COPY_FILES += \
