@@ -51,6 +51,7 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # UI
 TW_THEME              := portrait_hdpi
+TW_EXTRA_LANGUAGES    := true
 TW_CUSTOM_BATTERY_POS := 800
 TW_CUSTOM_CLOCK_POS   := 65
 TW_CUSTOM_CPU_POS     := 270
