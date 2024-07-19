@@ -14,6 +14,7 @@ TW_MAX_BRIGHTNESS     := 2047
 
 # Display
 TW_NO_SCREEN_BLANK := true
+TW_FRAMERATE       := 120
 
 # Encryption
 BOARD_USES_METADATA_PARTITION  := true
