@@ -6,3 +6,4 @@
 
 # UI
 TW_THEME              := portrait_hdpi
+TW_EXTRA_LANGUAGES    := true
