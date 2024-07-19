@@ -1,0 +1,24 @@
+# ADB
+ro.adb.secure=0
+
+# Crypto
+fbe.metadata.wrappedkey=true
+keymaster_ver=4.1
+vendor.gatekeeper.disable_spu=true
+
+# SoC
+ro.boot.product.vendor.sku=holi
+ro.soc.manufacturer=QTI
+ro.soc.model=SM6375
+
+# USB
+sys.usb.mtp.batchcancel=1
+vendor.usb.controller=4e00000.dwc3
+vendor.usb.diag.func.name=ffs
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss_sw
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_ffs_mtp=1
+vendor.usb.use_gadget_hal=0
