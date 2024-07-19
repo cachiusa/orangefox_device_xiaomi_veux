@@ -1,8 +1,39 @@
 # All unpinned blobs below are extracted from OS1.0.1.0.TKCCNXM
 
+# Diag
+vendor/lib64/libdiag.so:recovery/root/vendor/lib64/libdiag.so
+
+# DRM
+vendor/bin/qseecomd:recovery/root/vendor/bin/qseecomd
+vendor/etc/init/qseecomd.rc:recovery/root/system/etc/init/qseecomd.rc
+vendor/lib64/libGPreqcancel.so:recovery/root/vendor/lib64/libGPreqcancel.so
+vendor/lib64/libGPreqcancel.so:recovery/root/vendor/lib64/libGPreqcancel.so
+vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so
+vendor/lib64/libdrmfs.so:recovery/root/vendor/lib64/libdrmfs.so
+vendor/lib64/libdrmtime.so:recovery/root/vendor/lib64/libdrmtime.so
+vendor/lib64/libqcbor.so:recovery/root/vendor/lib64/libqcbor.so
+vendor/lib64/libqisl.so:recovery/root/vendor/lib64/libqisl.so
+vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so
+vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so
+
 # Firmware (touchscreen)
 vendor/firmware/goodix_cfg_group.bin:recovery/root/vendor/firmware/goodix_cfg_group.bin
 vendor/firmware/goodix_firmware.bin:recovery/root/vendor/firmware/goodix_firmware.bin
 
 # Firmware (vibrator)
 vendor/firmware/aw8624_haptic.bin:recovery/root/vendor/firmware/aw8624_haptic.bin
+
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:recovery/root/vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:recovery/root/system/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.1-service-qti:recovery/root/vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
+vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc:recovery/root/system/etc/init/android.hardware.keymaster@4.1-service-qti.rc
+vendor/lib64/libkeymasterdeviceutils.so:recovery/root/vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterutils.so:recovery/root/vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqtikeymaster4.so:recovery/root/vendor/lib64/libqtikeymaster4.so
+
+# Time services
+vendor/lib64/libtime_genoff.so:recovery/root/vendor/lib64/libtime_genoff.so
