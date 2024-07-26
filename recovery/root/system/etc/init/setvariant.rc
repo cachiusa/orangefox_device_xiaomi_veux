@@ -1,0 +1,10 @@
+on early-init
+    chmod 0777 /system/bin/setvariant.sh
+    start setvariant
+
+service setvariant /system/bin/setvariant.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:recovery:s0
