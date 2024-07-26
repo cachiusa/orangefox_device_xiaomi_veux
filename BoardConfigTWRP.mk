@@ -49,6 +49,9 @@ TWRP_INCLUDE_LOGCAT := true
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
 
+# Thermal
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone16/temp"
+
 # Time
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_QCOM_ATS_OFFSET           := 1596724914595
