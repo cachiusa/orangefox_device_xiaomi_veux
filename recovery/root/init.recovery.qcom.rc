@@ -45,9 +45,3 @@ on boot
 on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
 
-# keystore is started and stopped on demand by TWRP
-service keystore /system/bin/keystore /tmp/misc/keystore
-    user root
-    group root drmrpc readproc log
-    disabled
-    seclabel u:r:recovery:s0
