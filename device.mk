@@ -69,3 +69,8 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.usb.dwc3_msm=4e00000.ssusb \
+    vendor.usb.use_ffs_mtp=1
