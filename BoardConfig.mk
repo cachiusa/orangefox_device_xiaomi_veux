@@ -33,13 +33,11 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 
 BOARD_KERNEL_CMDLINE := \
     androidboot.hardware=qcom \
-    androidboot.memcg=1 \
     lpm_levels.sleep_disabled=1 \
     service_locator.enable=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
     swiotlb=noforce \
     loop.max_part=7 \
-    cgroup.memory=nokmem,nosocket \
     iptable_raw.raw_before_defrag=1 \
     ip6table_raw.raw_before_defrag=1 \
     firmware_class.path=/vendor/firmware
