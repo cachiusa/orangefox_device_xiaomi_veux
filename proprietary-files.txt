@@ -1,0 +1,4 @@
+# All unpinned blobs below are extracted from OS1.0.1.0.TKCCNXM
+
+# Firmware (vibrator)
+vendor/firmware/aw8624_haptic.bin:recovery/root/vendor/firmware/aw8624_haptic.bin
