@@ -49,6 +49,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libion.recovery
 
+# Media Transfer Protocol
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.usb.use_ffs_mtp=1
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
 
