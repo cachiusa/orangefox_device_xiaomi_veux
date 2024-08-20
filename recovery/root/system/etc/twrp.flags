@@ -24,6 +24,3 @@
 /persist_img        emmc    /dev/block/bootdevice/by-name/persist                                flags=display="Persist Image";backup
 /rescue             ext4    /dev/block/bootdevice/by-name/rescue                                 flags=display="Rescue";wipeingui
 /cust               ext4    /dev/block/bootdevice/by-name/cust                                   flags=display="Cust";wipeingui
-
-/external_sdcard    vfat    /dev/block/mmcblk1p1                        /dev/block/mmcblk1       flags=fsflags="nosuid,nodev,utf8";display="External SD card";storage;wipeingui;removable
-/usb_otg            vfat    /dev/block/sdg1                             /dev/block/sdg           flags=fsflags="nosuid,nodev,utf8";display="USB OTG";storage;wipeingui;removable
