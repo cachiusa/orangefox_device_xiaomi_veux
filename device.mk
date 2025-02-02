@@ -10,10 +10,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
-ifdef TW_VNDR_BOOT
-ifneq ($(TW_VNDR_BOOT),1)
+ifdef TWRP_BUILD_BOOT_IMAGE
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch.mk)
-endif
 endif
 
 AB_OTA_POSTINSTALL_CONFIG += \
