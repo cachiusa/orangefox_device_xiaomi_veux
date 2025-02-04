@@ -11,12 +11,6 @@ fi
 
 set -a
 
-# Build hack
-ALLOW_MISSING_DEPENDENCIES=true
-
-# Force default locale
-LC_ALL="C"
-
 # Boot-as-recovery (legacy)
 # Set this to build boot.img instead of vendor_boot.img
 #TWRP_BUILD_BOOT_IMAGE=1
