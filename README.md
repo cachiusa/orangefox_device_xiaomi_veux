@@ -25,7 +25,7 @@ lunch twrp_veux-eng && mka adbd vendorbootimage
 
 If building for boot-as-recovery ROMs, run:
 ```
-export TW_VNDR_BOOT=0
+export TWRP_BUILD_BOOT_IMAGE=1
 source build/envsetup.sh
 lunch twrp_veux-eng && mka adbd bootimage
 ```
