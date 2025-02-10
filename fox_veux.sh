@@ -48,6 +48,7 @@ OF_DONT_KEEP_LOG_HISTORY=1
 # UI
 ## Display
   OF_SCREEN_H=2400
+  OF_HIDE_NOTCH=1
 
 ## Install options
   OF_OPTIONS_LIST_NUM=8

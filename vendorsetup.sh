@@ -4,11 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-VENDORSETUP_PATH=device/xiaomi/veux
-
 if [ -z "$BASH_SOURCE" ]; then
   echo "warn: This command should be run with /bin/bash shell"
+  return
 fi
+
+VENDORSETUP_PATH=$(dirname "${BASH_SOURCE[0]}")
 
 set -a
 
