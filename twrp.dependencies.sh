@@ -6,14 +6,15 @@
 set -e
 
 repo_sync() {
+  unset ORIGIN_EXISTS CURRENT_URL HEAD_BEHIND NO_HEAD
   REPO_PATH=${1:?}
   REPO_URL=${2:?}
   REPO_REF=${3:?}
   FETCH_ARGS="--no-tags --prune --no-recurse-submodules --depth=1 ${4}"
   ORIGIN_BRANCH="refs/remotes/origin/$REPO_REF"
 
-  INFO() { echo "-- $REPO_PATH: $*"; }
-  _GIT() { git -C "$REPO_PATH" "$@"; }
+  INFO() { echo "--- $REPO_PATH: $*"; }
+  GIT() { git -C "$REPO_PATH" "$@"; }
 
   INFO "Syncing repository"
 
@@ -22,10 +23,10 @@ repo_sync() {
     git init "$REPO_PATH"
   fi
 
-  for _remote in $(_GIT remote); do
+  for _remote in $(GIT remote); do
     if [[ $_remote = "origin" ]]; then
-      ORIGIN_EXISTS=true
-      CURRENT_URL=$(_GIT remote get-url origin)
+      ORIGIN_EXISTS=1
+      CURRENT_URL=$(GIT remote get-url origin)
       break
     else
       continue
@@ -34,21 +35,27 @@ repo_sync() {
 
   if [[ -z $ORIGIN_EXISTS ]]; then
     INFO "Adding remote"
-    _GIT remote add origin "$REPO_URL"
+    GIT remote add origin "$REPO_URL"
   elif [[ $CURRENT_URL != "$REPO_URL" ]]; then
     INFO "Set 'origin' to $REPO_URL"
-    _GIT remote set-url origin "$REPO_URL"
+    GIT remote set-url origin "$REPO_URL"
   fi
 
   INFO "Fetching the repository"
-  _GIT fetch $FETCH_ARGS origin "$REPO_REF"
+  GIT fetch $FETCH_ARGS origin "$REPO_REF"
 
-  if ! _GIT diff --quiet HEAD "$ORIGIN_BRANCH"; then
-    INFO "Checking out the ref"
-    _GIT checkout --force -B "$REPO_REF" "$ORIGIN_BRANCH"
+  if GIT log > /dev/null 2>&1 ; then
+    GIT diff --quiet HEAD "$ORIGIN_BRANCH" || HEAD_BEHIND=1
+  else
+    NO_HEAD=1
   fi
 
-  INFO "$(_GIT log -1 --format=%H)"
+  if [[ -n $NO_HEAD || -n $HEAD_BEHIND ]] ; then
+    INFO "Checking out the ref"
+    GIT checkout --force -B "$REPO_REF" "$ORIGIN_BRANCH"
+  fi
+
+  INFO "$(GIT log -1 --format=%H)"
 }
 
 # Initialize
