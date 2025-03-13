@@ -17,7 +17,12 @@ set -a
 #TWRP_BUILD_BOOT_IMAGE=1
 
 if [ "$NOT_ORANGEFOX" != "1" ]; then
-  source "${VENDORSETUP_PATH}/fox_veux.sh"
+  if [ -z "$FOX_BUILD_DEVICE" ]; then
+    FOX_BUILD_DEVICE=veux
+  fi
+  if [ "$FOX_BUILD_DEVICE" = "veux" ]; then
+    source "${VENDORSETUP_PATH}/fox_veux.sh"
+  fi
 fi
 
 set +a
