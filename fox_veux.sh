@@ -5,7 +5,7 @@
 
 # General
 FOX_TARGET_DEVICES="veux,peux"
-TARGET_DEVICE_ALT="peux"
+FOX_DISABLE_UPDATEZIP=1
 OF_MAINTAINER="github.com/cachiusa"
 FOX_MAINTAINER_PATCH_VERSION=$(date +"%Y%m%d")
 
