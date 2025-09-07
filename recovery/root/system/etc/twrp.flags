@@ -24,5 +24,3 @@
 /persist_img        ext4    /dev/block/bootdevice/by-name/persist                                flags=display="Persist";backup
 /rescue             ext4    /dev/block/bootdevice/by-name/rescue                                 flags=display="Rescue"
 /cust               ext4    /dev/block/bootdevice/by-name/cust                                   flags=display="Cust";backup
-
-/frp                emmc    /dev/block/bootdevice/by-name/frp                                    flags=display="FRP";wipeingui;backup
