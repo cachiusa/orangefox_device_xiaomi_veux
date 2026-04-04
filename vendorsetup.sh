@@ -13,10 +13,6 @@ VENDORSETUP_PATH=$(dirname "${BASH_SOURCE[0]}")
 
 set -a
 
-# Boot-as-recovery (legacy)
-# Set this to build boot.img instead of vendor_boot.img
-#TWRP_BUILD_BOOT_IMAGE=1
-
 if [ "$NOT_ORANGEFOX" != "1" ]; then
   if [ -z "$FOX_BUILD_DEVICE" ]; then
     FOX_BUILD_DEVICE=veux
